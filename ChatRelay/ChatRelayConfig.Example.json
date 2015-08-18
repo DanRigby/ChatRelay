@@ -1,0 +1,60 @@
+{
+	"chatServers" : [
+        {
+			"serverId" : "Slack",
+			"serverType" : "Slack",
+			"userName" : "<Your Slack Bot Name>",
+			"password" : "<Your Slack Bot API Key>",
+		}, {
+			"serverId" : "Jabbr",
+			"serverType" : "Jabbr",
+			"serverAddress" : "https://jabbr.net",
+			"userName" : "<Your Jabbr.net user Name>",
+			"password" : "<Your Jabbr.net User Password>",
+		}, {
+			"serverId" : "<Name of IRC Network>",
+			"serverType" : "Irc",
+			"serverAddress" : "<Irc Server Hostname>",
+			"userName" : "<Irc User Name>",
+			"password" : "<Password If Applicable>",
+		}
+	],
+	"channelMappings" : [
+        {
+            "SourceServerId": "Slack",
+            "SourceChannel": "<Slack Room Name>",
+            "TargetServerId": "Jabbr",
+            "TargetChannel": "<Jabbr Room Name>",
+        },
+        {
+            "SourceServerId": "Slack",
+            "SourceChannel": "<Slack Room Name>",
+            "TargetServerId": "<Name of IRC Network>",
+            "TargetChannel": "<Name of IRC Channel (without the #)>",
+        },
+        {
+            "SourceServerId": "Jabbr",
+            "SourceChannel": "<Jabbr Room Name>",
+            "TargetServerId": "Slack",
+            "TargetChannel": "<Slack Room Name>",
+        },
+        {
+            "SourceServerId": "Jabbr",
+            "SourceChannel": "<Jabbr Room Name>",
+            "TargetServerId": "Freenode",
+            "TargetChannel": "<Name of IRC Channel (without the #)>",
+        },
+        {
+            "SourceServerId": "<Name of IRC Network>",
+            "SourceChannel": "<Name of IRC Channel (without the #)>",
+            "TargetServerId": "Slack",
+            "TargetChannel": "<Slack Room Name>",
+        },
+        {
+            "SourceServerId": "<Name of IRC Network>",
+            "SourceChannel": "<Name of IRC Channel (without the #)>",
+            "TargetServerId": "Jabbr",
+            "TargetChannel": "<Jabbr Room Name>",
+        },
+	]
+}
