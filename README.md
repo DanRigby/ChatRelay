@@ -13,8 +13,6 @@ It currently supports relaying messages between channels on the following servic
 ##Known Issues
 
  * Emotes are not yet supported.
- * New users joining Slack currently crash the relay (though it should restart automatically).
-   * This is due to a bug in the library I'm currently using to interact with Slack.
 
 ##Disclaimer
 
