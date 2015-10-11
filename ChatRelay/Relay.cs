@@ -61,6 +61,8 @@ namespace ChatRelay
                 subscriptions.Add(
                     sourceAdapter.Messages
                     .Where(x => x.Room == sourceChannel)
+                    // Don't relay messages beginning with tilde, this is the relay opt-out operator
+                    .Where(x => !x.Text.Trim().StartsWith("~"))
                     .Subscribe(msg => targetAdapter.SendMessage(destinationChannel, msg))
                 );
             }
