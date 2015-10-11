@@ -10,6 +10,10 @@ It currently supports relaying messages between channels on the following servic
  * [JabbR](https://github.com/davidfowl/JabbR)
  * [IRC](http://en.wikipedia.org/wiki/Internet_Relay_Chat).
 
+##Commands
+
+ * Messages beginning with tilde (~) will not be relayed. Ex: "~This message will not be sent to other services."
+
 ##Known Issues
 
  * Emotes are not yet supported.
