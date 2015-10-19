@@ -164,6 +164,12 @@ namespace ChatRelay.Adapters
                 return splitText.Length > 1 && !string.IsNullOrWhiteSpace(splitText[1]) ? splitText[1] : splitText[0];
             });
 
+            // Remove any character encoding
+            formattedMessage = formattedMessage
+                .Replace("&amp;", "&")
+                .Replace("&lt;", "<")
+                .Replace("&gt;", ">");
+
             return formattedMessage;
         }
 
