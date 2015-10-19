@@ -168,7 +168,14 @@ namespace ChatRelay.Adapters
             formattedMessage = formattedMessage
                 .Replace("&amp;", "&")
                 .Replace("&lt;", "<")
-                .Replace("&gt;", ">");
+                .Replace("&gt;", ">")
+            // Replace ``` characters. JabbR supports them for single lines only & IRC not at all.
+                .Replace(" ```", string.Empty)
+                .Replace("``` ", string.Empty)
+                .Replace("```", string.Empty); // Todo: This should probably be a regex...  http://xkcd.com/1171/
+
+            // TODO: I need to come up with a way to markup the text in a neutral way and then have each adapter
+            // decide how to handle things like "```" and "**". Maybe I just convert to markdown [CommonMark]? 
 
             return formattedMessage;
         }
