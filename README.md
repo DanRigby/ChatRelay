@@ -1,6 +1,6 @@
 # ChatRelay
 
-##Introduction
+## Introduction
 
 ChatRelay is a cross service chat relay.
 
@@ -10,15 +10,15 @@ It currently supports relaying messages between channels on the following servic
  * [JabbR](https://github.com/davidfowl/JabbR)
  * [IRC](http://en.wikipedia.org/wiki/Internet_Relay_Chat).
 
-##Commands
+## Commands
 
  * Messages beginning with tilde (~) will not be relayed. Ex: "~This message will not be sent to other services."
 
-##Known Issues
+## Known Issues
 
  * Emotes are not yet supported.
 
-##Disclaimer
+## Disclaimer
 
 Please get the approval of the users who administer the channels/rooms you intend to relay prior to setting up a relay!
 
